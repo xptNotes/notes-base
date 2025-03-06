@@ -17,11 +17,12 @@ export default sidebar({
 //     "handwritten-rpc-framework",
 //     "source-code-reading",
 //   ],
+// 图标选择 https://fontawesome.com/search?o=r&c=animals&s=solid&ip=classic
   // 必须放在最后面
   "/": [
       {
         text: "基础组件",
-        icon: "java",
+        icon: "hippo",
         collapsible: true,
         prefix: "summary/base-components/",
         children:[
@@ -58,9 +59,9 @@ export default sidebar({
       // java
       {
         text: "java",
-        icon: "java",
+        icon: "dolphin",
         collapsible: true,
-        prefix: "summary/java/",
+        prefix: "/summary/java/",
         children:[
             {
               text: "java基础",

@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/notes-base/",
 
   lang: "zh-CN",
-  title: "文档演示",
-  description: "vuepress-theme-hope 的文档演示",
+  title: "Offer收割机",
+  description: "java程序员的学习、成长之路",
 
   theme,
 
