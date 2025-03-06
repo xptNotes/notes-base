@@ -1,2 +1,0 @@
-    import "/Users/xupengtao/Documents/note-space/notes-base/node_modules/.pnpm/@vuepress+plugin-markdown-ext@2.0.0-rc.80_markdown-it@14.1.0_vuepress@2.0.0-rc.20_@vuep_856c506aa299843ea46f1e647bfc3ee1/node_modules/@vuepress/plugin-markdown-ext/lib/client/styles/footnote.css"
-    import "/Users/xupengtao/Documents/note-space/notes-base/node_modules/.pnpm/@vuepress+plugin-markdown-ext@2.0.0-rc.80_markdown-it@14.1.0_vuepress@2.0.0-rc.20_@vuep_856c506aa299843ea46f1e647bfc3ee1/node_modules/@vuepress/plugin-markdown-ext/lib/client/styles/tasklist.css"

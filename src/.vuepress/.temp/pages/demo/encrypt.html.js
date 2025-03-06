@@ -1,3 +1,0 @@
-import comp from "/Users/xupengtao/Documents/note-space/notes-base/src/.vuepress/.temp/pages/demo/encrypt.html.vue"
-const data = JSON.parse("{\"path\":\"/demo/encrypt.html\",\"title\":\"密码加密的文章\",\"lang\":\"zh-CN\",\"frontmatter\":{\"icon\":\"lock\",\"category\":[\"使用指南\"],\"tag\":[\"加密\"],\"feed\":false,\"seo\":false,\"head\":[]},\"git\":{\"createdTime\":1741243409000,\"updatedTime\":1741243409000,\"contributors\":[{\"name\":\"Jason Statham\",\"username\":\"Jason Statham\",\"email\":\"xpt_notes@163.com\",\"commits\":1,\"url\":\"https://github.com/Jason Statham\"}]},\"readingTime\":{\"minutes\":0.51,\"words\":154},\"filePathRelative\":\"demo/encrypt.md\",\"localizedDate\":\"2025年3月6日\"}")
-export { comp, data }
