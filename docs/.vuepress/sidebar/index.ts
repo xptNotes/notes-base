@@ -59,7 +59,7 @@ export default sidebar({
       // java
       {
         text: "java",
-        icon: "dolphin",
+        icon: "fish",
         collapsible: true,
         prefix: "/summary/java/",
         children:[
