@@ -440,34 +440,7 @@ https://mp.weixin.qq.com/s?__biz=MzU0OTE4MzYzMw==&mid=2247512204&idx=4&sn=8a2a24
 
 
 
-```
-config-prod.properties
-config-test.properties
 
-
-curl --request GET \
-  --url http://localhost:8081/cms/jcc/common/queryLineupLabelList \
-  --header 'Accept: */*' \
-  --header 'Accept-Encoding: gzip, deflate, br' \
-  --header 'Connection: keep-alive' \
-  --header 'Cookie: login_cookie_info=eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwIiwiaWF0IjoxNzQ0MTg4OTQxLCJpc3MiOiJhZG1pbiIsInN1YiI6ImFkbWluIiwiZXhwIjoxNzQ0MjMyMTQxfQ.H74gdzRu9rf0xdK6CKLB3QiGt3vxVwQJdP8LMut9oW4' \
-  --header 'User-Agent: PostmanRuntime-ApipostRuntime/1.1.0'
-  
-  
-  
-  
-  curl --request POST \
-  --url http://127.0.0.1:8081/cms/login \
-  --header 'Accept: */*' \
-  --header 'Accept-Encoding: gzip, deflate, br' \
-  --header 'Connection: keep-alive' \
-  --header 'Content-Type: application/json' \
-  --header 'User-Agent: PostmanRuntime-ApipostRuntime/1.1.0' \
-  --data '{
-    "username":"admin",
-    "password":"admin"
-}'
-```
 
 
 

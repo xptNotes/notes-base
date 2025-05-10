@@ -20,6 +20,45 @@ export default sidebar({
 // 图标选择 https://fontawesome.com/search?o=r&c=animals&s=solid&ip=classic
   // 必须放在最后面
   "/": [
+     // java
+     {
+      text: "java",
+      icon: "fish",
+      collapsible: true,
+      prefix: "/summary/java/",
+      children:[
+          {
+            text: "java基础",
+            icon: "star",
+            prefix: "basic/",
+            collapsible: true,
+            children: [
+              "design-pattern"
+            ],
+          },
+          {
+            text: "并发",
+            icon: "star",
+            prefix: "concurrent/",
+            collapsible: true,
+            children: [
+               "concurrent-summary"
+            ],
+          },
+          {
+              text: "jvm",
+              icon: "star",
+              prefix: "jvm/",
+              collapsible: true,
+              children: [
+                 "jvm-info",
+                 "hot-deployment",
+                 "java-plugin"
+
+              ],
+            },
+      ]
+    },
       {
         text: "基础组件",
         icon: "hippo",
@@ -72,42 +111,7 @@ export default sidebar({
 
         ]
       },
-      // java
-      {
-        text: "java",
-        icon: "fish",
-        collapsible: true,
-        prefix: "/summary/java/",
-        children:[
-            {
-              text: "java基础",
-              icon: "star",
-              prefix: "basic/",
-              collapsible: true,
-              children: [
-                "design-pattern"
-              ],
-            },
-            {
-              text: "并发",
-              icon: "star",
-              prefix: "concurrent/",
-              collapsible: true,
-              children: [
-                 "concurrent-summary"
-              ],
-            },
-            {
-                text: "jvm",
-                icon: "star",
-                prefix: "jvm/",
-                collapsible: true,
-                children: [
-                   "jvm-basic"
-                ],
-              },
-        ]
-      },
+     
       {
         text: "开源框架",
         icon: "fish",
