@@ -100,10 +100,10 @@ export default sidebar({
               prefix: "mysql/",
               collapsible: true,
               children: [
-                  "basic-info",
-                  "advance-info",
-                  "lock-types-analysis",
-                  "mysql-interview-summary"
+                  // "basic-info",
+                  "advance-info"
+                  // "lock-types-analysis",
+                  // "mysql-interview-summary"
               ],
             },
             "mq-basic",

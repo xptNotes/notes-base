@@ -216,17 +216,84 @@ spring事务是通过动态代理实现的,主要有以下两种方式:
 
 
 
+## 事务失效的原因
+
+spring事务失效的原因可能有:
+
+- 自调用问题,同一个bean里面,一个事务方法,调用另外一个事务方法
+- 非public方法注解
+- 异常处理导致的失效,内部抛出异常,但是自己捕获了 
+- 异常类型不匹配,默认处理RuntimeException和Error
+- 事务配置问题
+  - 传播行为
+  - 未启用事务管理器
+  - 多数据源未配置正确的事务管理器
+  - 手动管理数据库连接
+- 类没被spring管理
+- 错误的事务管理器
 
 
 
 
 
+### 异常处理不正确,例子:
+
+```java
+@Transactional
+public void method() {
+    try {
+        // 数据库操作
+    } catch (Exception e) {
+        // 未抛出异常，事务不会回滚
+        e.printStackTrace();
+    }
+}
+```
 
 
 
+### 异常不匹配:
+
+```java
+@Transactional
+public void method() throws IOException {
+    // 抛出IOException，默认不触发回滚
+}
+
+//解决方式
+@Transactional(rollbackFor = Exception.class) // 显式指定回滚异常类型
+public void method() throws IOException {
+    // ...
+}
+```
 
 
 
+## 排查事务失效原因
+
+排查步骤:
+
+1. **检查方法可见性**：确保事务方法为 public
+2. **检查异常处理**：确认异常未被吞掉且类型匹配
+3. **检查传播行为**：确认传播行为配置正确
+4. **检查代理调用**：避免自调用，或通过 AopContext 获取代理
+5. **检查事务管理器配置**：确保正确配置并启用
+6. **检查数据库引擎**：确保使用支持事务的引擎
+7. **查看日志**：开启 DEBUG 日志，查看 Spring 事务处理过程
+
+
+
+## **最佳实践**
+
+1. **使用 @Transactional 注解时**：
+   - 优先标注在 public 方法上
+   - 显式指定 rollbackFor 属性
+   - 避免在方法内部捕获异常
+2. **避免自调用**：通过注入自身代理或 AopContext 获取代理对象
+3. **合理选择传播行为**：理解各种传播行为的差异，避免误用
+4. **监控与测试**：
+   - 编写事务相关的单元测试
+   - 使用工具监控事务执行情况
 
 
 
