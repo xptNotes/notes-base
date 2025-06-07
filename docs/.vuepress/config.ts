@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/notes-base/",
 
   lang: "zh-CN",
-  title: "Offer收割机",
-  description: "java程序员的学习、成长之路",
+  title: "老徐学习总结",
+  description: "这是本人的学习总结,只是读书摘抄和自己工作的一些经验,不做商业用途",
 
   theme,
 

@@ -6,19 +6,6 @@ import { sidebar } from "vuepress-theme-hope";
 // import { openSourceProject } from "./open-source-project.js";
 
 export default sidebar({
-  // 应该把更精确的路径放置在前边
-//   "/open-source-project/": openSourceProject,
-//   "/books/": books,
-//   "/about-the-author/": aboutTheAuthor,
-//   "/high-quality-technical-articles/": highQualityTechnicalArticles,
-//   "/zhuanlan/": [
-//     "java-mian-shi-zhi-bei",
-//     "back-end-interview-high-frequency-system-design-and-scenario-questions",
-//     "handwritten-rpc-framework",
-//     "source-code-reading",
-//   ],
-// 图标选择 https://fontawesome.com/search?o=r&c=animals&s=solid&ip=classic
-  // 必须放在最后面
   "/": [
      // java
      {
@@ -89,6 +76,7 @@ export default sidebar({
                     children: [
                        "redis-best-practies",
                        "redis-distributed",
+                       "redis-zset-source"
 
                     ],
                   },
@@ -100,14 +88,21 @@ export default sidebar({
               prefix: "mysql/",
               collapsible: true,
               children: [
-                  // "basic-info",
+                  "basic-info",
                   "advance-info"
-                  // "lock-types-analysis",
-                  // "mysql-interview-summary"
               ],
             },
-            "mq-basic",
-            "kafka-basic"
+               {
+              text: "MQ",
+              icon: "star",
+              prefix: "mq/",
+              collapsible: true,
+              children: [
+                  "kafka总结",
+                  "mq-question",
+                  "rocketmq总结"
+              ],
+            }
 
         ]
       },
@@ -158,20 +153,50 @@ export default sidebar({
         ]
       },
       {
-        text: "分布式",
+        text: "分布式和微服务",
         icon: "fish",
         collapsible: true,
-        prefix: "/summary/distributed/",
+        prefix: "/summary/distributed&micro-service/",
         children:[
           {
-            text: "分布式解决方案",
+            text: "分布式理论",
             icon: "star",
-            prefix: "solution/",
+            prefix: "distributed-theory/",
             collapsible: true,
             children: [
-               "distributed-transaction"
+               "d-theory-basic"
             ],
           },
+           {
+            text: "分布式解决方案",
+            icon: "star",
+            prefix: "distributed-solution/",
+            collapsible: true,
+            children: [
+               "d-solution-baisc"
+            ],
+          },
+            {
+            text: "微服务基础",
+            icon: "star",
+            prefix: "micro-theory/",
+            collapsible: true,
+            children: [
+                "m-theory",
+                "service-manage-basic",
+                "service-capacity",
+            ],
+          },
+            {
+            text: "微服务架构实战",
+            icon: "star",
+            prefix: "micro-design/",
+            collapsible: true,
+            children: [
+               "online-offline-graceful"
+            ],
+          },
+
         ]
       },
       {
@@ -219,25 +244,6 @@ export default sidebar({
         ]
       },
       {
-        text: "微服务",
-        icon: "fish",
-        collapsible: true,
-        prefix: "/summary/micro-service/",
-        children:[
-           {
-            text: "基础知识",
-            icon: "star",
-            prefix: "basic/",
-            collapsible: true,
-            children: [
-              "distribute-service-framework",
-              "micro-service-construct"
-            ],
-          },
-          "micro-service-summary",
-        ]
-      },
-      {
         text: "业务",
         icon: "fish",
         collapsible: true,
@@ -272,6 +278,15 @@ export default sidebar({
           }
         ]
       },
+       {
+        text: "团队协作",
+        icon: "fish",
+        collapsible: true,
+        prefix: "/summary/collaborate-work/",
+        children:[
+           "work-basic"
+        ]
+      }
   ],
 
 });
